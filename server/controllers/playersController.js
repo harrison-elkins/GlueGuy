@@ -1,4 +1,4 @@
-const playersModel = require("../models/playersModel");
+const playersModel = require("../db/models/playersModel");
 
 function getAllPlayers(req, res) {
   const players = playersModel.getAllPlayers();

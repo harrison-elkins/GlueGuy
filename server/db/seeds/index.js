@@ -2,9 +2,9 @@ if (process.env.NODE_ENV !== "production") require("dotenv").config();
 
 require("../config");
 
-const Player = require("../../models/playersModel"),
-  //   User = require('../models/user'),
-  //   faker = require('faker'),
+const Player = require("../models/playersModel"),
+  User = require("../models/usersModel"),
+  faker = require("faker"),
   mongoose = require("mongoose"),
   players = require("../../data/players");
 
@@ -18,22 +18,22 @@ const dbReset = async () => {
   await Player.countDocuments({}, function (err, count) {
     console.log("Number of players:", count);
   });
-  //   await Task.countDocuments({}, function (err, count) {
-  //     console.log('Number of tasks:', count);
-  //   });
-  const playerIdArray = [];
+  await User.countDocuments({}, function (err, count) {
+    console.log("Number of users:", count);
+  });
 
   //USERS
-  // for (let i = 0; i < 100; i++) {
-  //   const me = new User({
-  //     name: `${faker.name.firstName()} ${faker.name.lastName()}`,
-  //     admin: Boolean(Math.round(Math.random())),
-  //     email: faker.internet.email(),
-  //     password: faker.internet.password(),
-  //   });
-  //   await me.generateAuthToken();
-  //   userIdArray.push(me._id);
-  // }
+  let userIdArray = [];
+  for (let i = 0; i < 100; i++) {
+    const me = new User({
+      name: `${faker.name.firstName()} ${faker.name.lastName()}`,
+      admin: Boolean(Math.round(Math.random())),
+      email: faker.internet.email(),
+      password: faker.internet.password(),
+    });
+    await me.generateAuthToken();
+    userIdArray.push(me._id);
+  }
 
   //PLAYERS
   let savedPlayers = players.map(async (obj) => {
@@ -49,7 +49,6 @@ const dbReset = async () => {
         blocks: obj.blocks,
       });
       let savedPlayer = await player.save();
-      console.log(savedPlayer);
     } catch (e) {
       console.log(e.message);
     }
@@ -58,9 +57,9 @@ const dbReset = async () => {
   await Player.countDocuments({}, function (err, count) {
     console.log("Number of players:", count);
   });
-  // await Task.countDocuments({}, function (err, count) {
-  //   console.log("Number of tasks:", count);
-  // });
+  await User.countDocuments({}, function (err, count) {
+    console.log("Number of users:", count);
+  });
 };
 
 dbReset();
