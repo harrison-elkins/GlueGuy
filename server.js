@@ -1,6 +1,7 @@
 if (process.env.NODE_ENV !== "production") require("dotenv").config();
 
-const app = require("./server/app"),
-  port = process.env.PORT || 8080;
+const app = require("./server/app");
 
-app.listen(port, () => console.log(`Express server is up on port ${port}`));
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
