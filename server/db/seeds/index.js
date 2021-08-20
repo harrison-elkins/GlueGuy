@@ -41,8 +41,11 @@ const dbReset = async () => {
       const player = await new Player({
         rank: obj.rank,
         name: obj.name,
+        desc: obj.desc,
         team: obj.team,
         points: obj.points,
+        fG: obj.fG,
+        threeP: obj.threeP,
         assists: obj.assists,
         boards: obj.boards,
         steals: obj.steals,
