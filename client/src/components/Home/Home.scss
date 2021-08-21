@@ -1,11 +1,6 @@
-.home-wrapper {
+.player__cards {
+  border: solid 1px black;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #5e60ce;
-}
-
-.players {
-  display: flex;
+  flex-direction: row;
+  height: 400px;
 }

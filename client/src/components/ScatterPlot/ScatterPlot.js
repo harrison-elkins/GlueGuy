@@ -17,7 +17,7 @@ class ScatterPlot extends Component {
           itemOpactity={1}
           theme={{
             background: "#5e60ce",
-            textColor: "#09ffcb",
+            textColor: "#fff",
             fontSize: 13,
             axis: {
               domain: {
@@ -35,7 +35,7 @@ class ScatterPlot extends Component {
             },
             grid: {
               line: {
-                stroke: "#09ffcb",
+                stroke: "#fff",
                 strokeWidth: 1,
               },
             },

@@ -26,14 +26,18 @@ export default class Home extends Component {
   render() {
     return (
       <main className="home-wrapper">
-        <ScatterPlot />
+        {/* <ScatterPlot /> */}
         {/* <Chart /> */}
         {/* <Radar /> */}
-        <div className="players">
+        <section className="player">
           {this.state.playerData.map((player) => {
-            return <h4 className="players__name">{player.name}</h4>;
+            return (
+              <div className="player__card">
+                <h4 className="player__name">{player.name}</h4>
+              </div>
+            );
           })}
-        </div>
+        </section>
       </main>
     );
   }
