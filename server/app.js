@@ -1,9 +1,9 @@
 require("./db/config");
 const express = require("express"),
   morgan = require("morgan"),
+  app = express(),
   playersRoutes = require("./routes/players"),
   usersRoutes = require("./routes/users"),
-  app = express(),
   cookieParser = require("cookie-parser"),
   passport = require("./middleware/authentification"),
   secureRoutes = require("./routes/secure/secureRoutes"),

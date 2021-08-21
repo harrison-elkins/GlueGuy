@@ -1,11 +1,3 @@
-// const fs = require("fs");
-
-// const getPlayers = () => JSON.parse(fs.readFileSync("./data/players.js"));
-// const setPlayers = (players) =>
-//   fs.writeFileSync("./data/players.json", JSON.stringify(players));
-
-// module.exports = { getPlayers, setPlayers };
-
 const mongoose = require("mongoose");
 
 const playerSchema = new mongoose.Schema(
@@ -25,29 +17,105 @@ const playerSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    points: {
-      type: Number,
+    desc: {
+      type: String,
       required: true,
       trim: true,
     },
-    assists: {
+    THREEp: {
       type: Number,
-      required: true,
       trim: true,
     },
-    boards: {
+    PTS: {
       type: Number,
-      required: true,
       trim: true,
     },
-    steals: {
+    AST: {
       type: Number,
-      required: true,
+
       trim: true,
     },
-    blocks: {
+    TRB: {
       type: Number,
-      required: true,
+
+      trim: true,
+    },
+    STL: {
+      type: Number,
+
+      trim: true,
+    },
+    BLK: {
+      type: Number,
+
+      trim: true,
+    },
+    eFG: {
+      type: Number,
+      trim: true,
+    },
+    FGp: {
+      type: Number,
+      trim: true,
+    },
+    TSP: {
+      type: Number,
+      trim: true,
+    },
+    eORB: {
+      type: Number,
+      trim: true,
+    },
+    eDRB: {
+      type: Number,
+      trim: true,
+    },
+    eTRB: {
+      type: Number,
+
+      trim: true,
+    },
+    eAST: {
+      type: Number,
+
+      trim: true,
+    },
+    eTOV: {
+      type: Number,
+
+      trim: true,
+    },
+    eUSG: {
+      type: Number,
+
+      trim: true,
+    },
+    TTLS: {
+      type: Number,
+
+      trim: true,
+    },
+    PPR: {
+      type: Number,
+
+      trim: true,
+    },
+    PPS: {
+      type: Number,
+
+      trim: true,
+    },
+    ORtg: {
+      type: Number,
+
+      trim: true,
+    },
+    DRtg: {
+      type: Number,
+      trim: true,
+    },
+    PER: {
+      type: Number,
       trim: true,
     },
     upvotes: {
@@ -64,7 +132,6 @@ const playerSchema = new mongoose.Schema(
   }
 );
 
-// Format the date sent back by mongo
 playerSchema.methods.toJSON = function () {
   const player = this;
   const playerObject = player.toObject();

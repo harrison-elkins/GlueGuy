@@ -3,6 +3,9 @@ import axios from "axios";
 import "./Home.scss";
 import React, { Component } from "react";
 import { getPlayers } from "../../utils/dataUtils";
+import Chart from "../chart/Chart";
+import Radar from "../radar/Radar";
+import ScatterPlot from "../ScatterPlot/ScatterPlot.js";
 
 export default class Home extends Component {
   state = {
@@ -22,12 +25,16 @@ export default class Home extends Component {
 
   render() {
     return (
-      <>
-        <ResponsiveScatterPlot />
-        {this.state.playerData.map((player) => {
-          return <h1>{player.name}</h1>;
-        })}
-      </>
+      <main className="home-wrapper">
+        <ScatterPlot />
+        {/* <Chart /> */}
+        {/* <Radar /> */}
+        <div className="players">
+          {this.state.playerData.map((player) => {
+            return <h4 className="players__name">{player.name}</h4>;
+          })}
+        </div>
+      </main>
     );
   }
 }
