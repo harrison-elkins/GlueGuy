@@ -6,6 +6,7 @@ import { getPlayers } from "../../utils/dataUtils";
 import Chart from "../chart/Chart";
 import Radar from "../radar/Radar";
 import ScatterPlot from "../ScatterPlot/ScatterPlot.js";
+import Card from "../Card/Card";
 
 export default class Home extends Component {
   state = {
@@ -32,8 +33,18 @@ export default class Home extends Component {
         <section className="player">
           {this.state.playerData.map((player) => {
             return (
-              <div className="player__card">
-                <h4 className="player__name">{player.name}</h4>
+              <div className="card">
+                <div className="card__top">
+                  <h4 className="card__name">{player.name}</h4>
+                  <p className="card__desc">
+                    {player.desc}
+                    <br />
+                    -Kevin O' Connor, pre-draft
+                  </p>
+                </div>
+                <div className="card__bottom">
+                  <div className="card__left-block"></div>
+                </div>
               </div>
             );
           })}

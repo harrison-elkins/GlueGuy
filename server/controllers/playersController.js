@@ -5,4 +5,12 @@ function getAllPlayers(req, res) {
   res.status(200).json(players);
 }
 
-modules.export = { getAllPlayers };
+function getSinglePlayer(req, res) {
+  const playerDetails = playersModel.getSinglePlayer();
+  const singlePlayer = playerDetails.find(
+    (player) => player.id === req.params.id
+  );
+  res.status(200).json(singlePlayer);
+}
+
+modules.export = { getAllPlayers, getSinglePlayer };

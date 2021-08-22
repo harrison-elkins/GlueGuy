@@ -50,6 +50,7 @@ const dbReset = async () => {
         TRB: obj.TRB,
         STL: obj.STL,
         BLK: obj.BLK,
+        TSP: obj.TSP,
         eFG: obj.eFG,
         eORB: obj.eORB,
         eDRB: obj.eDRB,

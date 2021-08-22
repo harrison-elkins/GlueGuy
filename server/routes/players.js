@@ -11,4 +11,15 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+  Player.findById(req.params.id)
+    .then((found) => {
+      if (!found) {
+        return res.status(404).end();
+      }
+      return res.status(200).json(found);
+    })
+    .catch((e) => e);
+});
+
 module.exports = router;
