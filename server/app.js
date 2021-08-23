@@ -10,6 +10,7 @@ const express = require("express"),
   path = require("path");
 
 // Parse incoming JSON into objects
+
 app.use(express.json());
 app.use(morgan("dev"));
 

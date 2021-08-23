@@ -3,18 +3,15 @@ import "./Header.scss";
 
 export default function Header() {
   return (
-    <header>
+    <header className="header">
       <h2 className="logo">LOGO</h2>
-      <nav>
-        <ul className="nav-links">
-          <li>
-            <a href="#">About</a>
+      <nav className="nav">
+        <ul className="nav__list">
+          <li className="nav__item">
+            <a href="/signup">Join</a>
           </li>
-          <li>
-            <a href="#">Players</a>
-          </li>
-          <li>
-            <a href="#">Join</a>
+          <li className="nav__item">
+            <a href="/join">Login</a>
           </li>
         </ul>
       </nav>

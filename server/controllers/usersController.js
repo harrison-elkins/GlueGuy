@@ -9,28 +9,19 @@ exports.createUser = async (req, res) => {
       password,
     });
     const token = await user.generateAuthToken();
-    res.cookie("jwt", token, {
-      httpOnly: true,
-      sameSite: "Strict",
-      secure: process.env.NODE_ENV !== "production" ? false : true,
-    });
-    res.status(201).json(user);
+    res.status(201).json({ user, token });
   } catch (e) {
     res.status(400).json({ error: e.toString() });
   }
 };
 
 exports.loginUser = async (req, res) => {
+  console.log(req.body);
   const { email, password } = req.body;
   try {
     const user = await User.findByCredentials(email, password);
     const token = await user.generateAuthToken();
-    res.cookie("jwt", token, {
-      httpOnly: true,
-      sameSite: "Strict",
-      secure: process.env.NODE_ENV !== "production" ? false : true,
-    });
-    res.json(user);
+    res.json({ user, token });
   } catch (e) {
     res.status(400).json({ error: e.toString() });
   }

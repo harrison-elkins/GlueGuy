@@ -1,5 +1,4 @@
 const mongoose = require("mongoose"),
-  validator = require("validator"),
   bcrypt = require("bcryptjs"),
   jwt = require("jsonwebtoken");
 
@@ -16,40 +15,11 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
       lowercase: true,
-      validate(value) {
-        if (!validator.isEmail(value)) {
-          throw new Error("Email is invalid.");
-        }
-      },
     },
     password: {
       type: String,
       required: true,
       trim: true,
-      validate(value) {
-        if (value.toLowerCase().includes("password")) {
-          throw new Error("Password can't be password.");
-        }
-        if (value.length < 6) {
-          throw new Error("Password must be at least 6 characters long.");
-        }
-      },
-    },
-    admin: {
-      type: Boolean,
-      required: true,
-      default: false,
-    },
-    tokens: [
-      {
-        token: {
-          type: String,
-          required: true,
-        },
-      },
-    ],
-    avatar: {
-      type: String,
     },
   },
   {
@@ -61,21 +31,20 @@ const userSchema = new mongoose.Schema(
  * // By naming this instance method toJSON we don't
  * // need to call it for it to run because of our
  * // express res.send or res.json methods calls it for us.
- * @return { name, email, admin, avatar, timestamps }
+ *
  */
 userSchema.methods.toJSON = function () {
   const user = this;
   const userObject = user.toObject();
   delete userObject.password;
-  delete userObject.tokens;
   return userObject;
 };
-
 /**
  * // This instance method will generate a user token
  * // and append it to the user.tokens array in the DB
- * @return { token }
+ *
  */
+
 userSchema.methods.generateAuthToken = async function () {
   const user = this;
   const token = jwt.sign(
@@ -83,10 +52,7 @@ userSchema.methods.generateAuthToken = async function () {
     process.env.JWT_SECRET,
     { expiresIn: "24h" }
   );
-
-  user.tokens = user.tokens.concat({ token });
   await user.save();
-
   return token;
 };
 

@@ -1,18 +1,17 @@
 import { ResponsiveBar } from "@nivo/bar";
 import React from "react";
 
-import "./Chart.css";
-import data from "./Data";
+import data from "./PERChartsData";
 import config from "./Config.js";
 
-class Chart extends React.Component {
+class PERChart extends React.Component {
   render() {
     return (
       <div class="chart">
         <ResponsiveBar
           data={data}
           keys={config.keys}
-          indexBy="stats"
+          indexBy="id"
           margin={config.margin}
           padding={0.3}
           colors={{ scheme: "blues" }}
@@ -62,4 +61,4 @@ class Chart extends React.Component {
   }
 }
 
-export default Chart;
+export default PERChart;

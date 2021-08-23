@@ -1,12 +1,9 @@
-import ResponsiveScatterPlot from "../ScatterPlot/ScatterPlot";
-import axios from "axios";
 import "./Home.scss";
 import React, { Component } from "react";
 import { getPlayers } from "../../utils/dataUtils";
+import PERChart from "../PERCharts/PERCharts";
 import Chart from "../chart/Chart";
-import Radar from "../radar/Radar";
 import ScatterPlot from "../ScatterPlot/ScatterPlot.js";
-import Card from "../Card/Card";
 
 export default class Home extends Component {
   state = {
@@ -30,6 +27,7 @@ export default class Home extends Component {
         {/* <ScatterPlot /> */}
         {/* <Chart /> */}
         {/* <Radar /> */}
+        {/* <PERChart /> */}
         <section className="player">
           {this.state.playerData.map((player) => {
             return (
