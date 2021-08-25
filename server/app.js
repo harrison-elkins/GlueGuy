@@ -2,15 +2,16 @@ require("./db/config");
 const express = require("express"),
   morgan = require("morgan"),
   app = express(),
-  playersRoutes = require("./routes/players"),
-  usersRoutes = require("./routes/users"),
-  cookieParser = require("cookie-parser"),
-  passport = require("./middleware/authentification"),
-  secureRoutes = require("./routes/secure/secureRoutes"),
-  path = require("path");
+  cors = require("cors");
+(playersRoutes = require("./routes/players")),
+  (usersRoutes = require("./routes/users")),
+  (cookieParser = require("cookie-parser")),
+  (passport = require("./middleware/authentification")),
+  (secureRoutes = require("./routes/secure/secureRoutes")),
+  (path = require("path"));
 
 // Parse incoming JSON into objects
-
+app.use(cors("dev"));
 app.use(express.json());
 app.use(morgan("dev"));
 

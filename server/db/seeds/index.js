@@ -42,6 +42,7 @@ const dbReset = async () => {
         rank: obj.rank,
         name: obj.name,
         desc: obj.desc,
+        image: obj.image,
         team: obj.team,
         PTS: obj.PTS,
         FGp: obj.FGp,

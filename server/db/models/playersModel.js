@@ -17,9 +17,16 @@ const playerSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    image: {
+      type: String,
+    },
     desc: {
       type: String,
       required: true,
+      trim: true,
+    },
+    image: {
+      type: String,
       trim: true,
     },
     THREEp: {
@@ -47,7 +54,6 @@ const playerSchema = new mongoose.Schema(
     },
     BLK: {
       type: Number,
-
       trim: true,
     },
     eFG: {
@@ -135,7 +141,6 @@ const playerSchema = new mongoose.Schema(
 playerSchema.methods.toJSON = function () {
   const player = this;
   const playerObject = player.toObject();
-
   return playerObject;
 };
 

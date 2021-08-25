@@ -1,12 +1,24 @@
 .header {
-  background-color: #d7e3fc;
+  background-color: #fff;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  margin: 20px 60px;
 }
-
+.logo {
+  color: #323323;
+}
 .nav {
   display: flex;
-  justify-content: flex-end;
   &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  &__item {
+    text-decoration: none;
+  }
+  &__link {
+    text-decoration: none;
+    color: #323323;
   }
 }

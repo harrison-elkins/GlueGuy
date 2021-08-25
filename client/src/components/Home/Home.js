@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { getPlayers } from "../../utils/dataUtils";
 import PERChart from "../PERCharts/PERCharts";
 import Chart from "../chart/Chart";
+import Radar from "../radar/Radar";
 import ScatterPlot from "../ScatterPlot/ScatterPlot.js";
 
 export default class Home extends Component {
@@ -25,8 +26,8 @@ export default class Home extends Component {
     return (
       <main className="home-wrapper">
         {/* <ScatterPlot /> */}
-        {/* <Chart /> */}
-        {/* <Radar /> */}
+        <Chart />
+        <Radar />
         {/* <PERChart /> */}
         <section className="player">
           {this.state.playerData.map((player) => {

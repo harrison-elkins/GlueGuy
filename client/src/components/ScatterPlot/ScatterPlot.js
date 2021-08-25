@@ -40,7 +40,7 @@ class ScatterPlot extends Component {
               },
             },
           }}
-          margin={{ top: 60, right: 90, bottom: 70, left: 90 }}
+          margin={{ top: 100, right: 90, bottom: 100, left: 90 }}
           xScale={{ type: "linear", min: 0, max: "auto" }}
           xFormat={function (e) {
             return e + " AST%";

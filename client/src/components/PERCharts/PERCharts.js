@@ -6,11 +6,12 @@ import config from "./Config.js";
 
 class PERChart extends React.Component {
   render() {
+    const average = { id: "Group Average", "Group Average": 17.29 };
     return (
       <div class="chart">
         <ResponsiveBar
-          data={data}
-          keys={config.keys}
+          data={[this.props.data, average]}
+          keys={[this.props.data.id, average.id]}
           indexBy="id"
           margin={config.margin}
           padding={0.3}
@@ -33,7 +34,8 @@ class PERChart extends React.Component {
           theme={{
             background: "#5e60ce",
             textColor: "#fff",
-            fontSize: 15,
+            fontFamily: "Avenir",
+            fontSize: 10,
             axis: {
               domain: {
                 line: {

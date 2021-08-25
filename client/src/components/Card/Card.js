@@ -9,34 +9,49 @@ import ScatterPlot from "../ScatterPlot/ScatterPlot";
 
 export default class Card extends Component {
   state = {
-    playerData: [],
+    allPlayers: [],
   };
+
   componentDidMount() {
     getPlayers()
       .then((res) => {
         console.log(res.data);
-        this.setState({ playerData: res.data });
+        this.setState({ allPlayers: res.data });
       })
       .catch((e) => {
         console.log(e);
       });
   }
 
+  handleClick = (id) => {
+    this.props.history.push(`/playerdetails/${id}`);
+    console.log(id);
+  };
   render() {
-    // <PERChart />;
     return (
       <>
+        <article className="chart-contain">{/* <PERChart /> */}</article>
         <ScatterPlot />
         <main className="container">
-          {this.state.playerData.map((player) => {
+          {this.state.allPlayers.map((player) => {
+            let playerData = { id: player.name };
+            playerData[player.name] = player.PER;
             return (
-              <div className="pcard">
+              <div
+                className="pcard"
+                onClick={() => this.handleClick(player._id)}
+              >
                 <div className="pcard__top">
-                  <h4 className="pcard__name">{player.name}</h4>
-                  <div className="pcard__pick"></div>
+                  <div className="pcard__name-wrap">
+                    <h4 className="pcard__name">{player.name}</h4>
+                    <p className="pcard__team">{player.team}</p>
+                  </div>
+                  <div className="pcard__pick">{player.rank}</div>
                 </div>
                 <div className="pcard__bottom">
-                  <div className="pcard__left-block"></div>
+                  <div className="pcard__left-block">
+                    <img className="pcard__image" src={player.image} />
+                  </div>
                   <div className="pcard__right-block">
                     <p className="pcard__desc">
                       {player.desc}
@@ -51,6 +66,7 @@ export default class Card extends Component {
                     </div>
                   </div>
                 </div>
+                {/* <PERChart data={playerData} /> */}
               </div>
             );
           })}
