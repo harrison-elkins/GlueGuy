@@ -16,9 +16,10 @@ class ScatterPlot extends Component {
           isInteractive={true}
           itemOpactity={1}
           theme={{
-            background: "#5e60ce",
+            background: "#242423",
             textColor: "#fff",
             fontSize: 15,
+            fontFamily: "Futura",
             axis: {
               domain: {
                 line: {
@@ -40,7 +41,7 @@ class ScatterPlot extends Component {
               },
             },
           }}
-          margin={{ top: 100, right: 90, bottom: 100, left: 90 }}
+          margin={{ top: 150, right: 150, bottom: 150, left: 150 }}
           xScale={{ type: "linear", min: 0, max: "auto" }}
           xFormat={function (e) {
             return e + " AST%";

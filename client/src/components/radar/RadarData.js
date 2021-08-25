@@ -1,8 +1,3 @@
-import React, { Component } from "react";
-import axios from "axios";
-import { getPlayers } from "../../utils/dataUtils";
-import playerData from "../Home/Home";
-
 export default [
   {
     stat: "USG%",

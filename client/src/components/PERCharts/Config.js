@@ -11,7 +11,7 @@ export default {
       id: "dots",
       type: "patternDots",
       background: "inherit",
-      color: "#38bcb2",
+      color: "#f5cb5c",
       size: 4,
       padding: 1,
       stagger: true,

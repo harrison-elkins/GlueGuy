@@ -32,9 +32,10 @@ class Chart extends React.Component {
           motionDamping={15}
           legends={config.legends}
           theme={{
-            background: "#5e60ce",
+            background: "#242423",
             textColor: "#fff",
             fontSize: 15,
+            fontFamily: "Futura",
             axis: {
               domain: {
                 line: {

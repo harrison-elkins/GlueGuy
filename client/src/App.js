@@ -12,10 +12,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/signup" exact component={SignUp} />
-          <Route path="/login" exact component={Login} />
-          <Route path="/card" exact component={Card} />
+          <Route path="/" exact component={Card} />
           <Route path="/playerdetails/:id" exact component={PlayerDetails} />
         </Switch>
       </BrowserRouter>

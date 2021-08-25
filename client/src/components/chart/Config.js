@@ -17,9 +17,9 @@ export default {
   ],
   margin: {
     top: 50,
-    right: 130,
+    right: 120,
     bottom: 50,
-    left: 60,
+    left: 150,
   },
   defs: [
     {
@@ -59,7 +59,7 @@ export default {
     tickSize: 5,
     tickPadding: 5,
     tickRotation: 0,
-    legend: "BOX-SCORE",
+    legend: "",
     legendPosition: "middle",
     legendOffset: 32,
   },
@@ -77,7 +77,7 @@ export default {
       anchor: "bottom-right",
       direction: "column",
       justify: false,
-      translateX: 120,
+      translateX: 100,
       translateY: 0,
       itemsSpacing: 2,
       itemWidth: 100,

@@ -11,7 +11,7 @@ class Radar extends Component {
           data={data}
           keys={["Cade Cunningham"]}
           indexBy="stat"
-          maxValue="90"
+          maxValue="80"
           margin={{ top: 70, right: 80, bottom: 40, left: 80 }}
           curve="linearClosed"
           borderWidth={2}
@@ -33,27 +33,32 @@ class Radar extends Component {
           animate={true}
           motionConfig="wobbly"
           isInteractive={true}
-          legends={[
-            {
-              anchor: "top-left",
-              direction: "column",
-              translateX: -50,
-              translateY: -40,
-              itemWidth: 80,
-              itemHeight: 20,
-              itemTextColor: "#999",
-              symbolSize: 12,
-              symbolShape: "circle",
-              effects: [
-                {
-                  on: "hover",
-                  style: {
-                    itemTextColor: "#000",
-                  },
+          theme={{
+            background: "#5e60ce",
+            textColor: "#fff",
+            fontFamily: "Avenir",
+            fontSize: 10,
+            axis: {
+              domain: {
+                line: {
+                  stroke: "#777777",
+                  strokeWidth: 0,
                 },
-              ],
+              },
+              ticks: {
+                line: {
+                  stroke: "#777777",
+                  strokeWidth: 0,
+                },
+              },
             },
-          ]}
+            grid: {
+              line: {
+                stroke: "#fff",
+                strokeWidth: 1,
+              },
+            },
+          }}
         />
       </div>
     );

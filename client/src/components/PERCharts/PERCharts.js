@@ -18,7 +18,7 @@ class PERChart extends React.Component {
           colors={{ scheme: "blues" }}
           colorBy="id"
           defs={config.defs}
-          fill={config.fill}
+          fill={[{ match: { id: this.props.data.id }, id: "dots" }]}
           borderColor="inherit:darker(1.6)"
           axisTop={null}
           axisRight={null}
@@ -32,10 +32,10 @@ class PERChart extends React.Component {
           motionDamping={15}
           legends={config.legends}
           theme={{
-            background: "#5e60ce",
+            background: "#242423",
             textColor: "#fff",
             fontFamily: "Avenir",
-            fontSize: 10,
+            fontSize: 15,
             axis: {
               domain: {
                 line: {
