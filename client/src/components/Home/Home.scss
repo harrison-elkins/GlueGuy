@@ -1,0 +1,44 @@
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80%;
+  height: 300px;
+  margin-top: 48px;
+  padding: 0 24px;
+
+  &__top {
+    border-bottom: 1px solid black;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__name {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  &__desc {
+    font-size: 12px;
+    overflow-wrap: normal;
+    text-align: left;
+  }
+  &__bottom {
+    display: flex;
+    height: 225px;
+    align-items: center;
+  }
+  &__left-block {
+    height: 175px;
+    width: 300px;
+    border: 1px solid black;
+  }
+}
