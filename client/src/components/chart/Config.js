@@ -1,24 +1,9 @@
 export default {
-  keys: [
-    "Cade Cunningham",
-    "Jalen Green",
-    "Evan Mobley",
-    "Scottie Barnes",
-    "Jalen Suggs",
-    "Jonathan Kuminga",
-    "Franz Wagner",
-    "Davion Mitchell",
-    "Zaire Williams",
-    "James Bouknight",
-    "Joshua Primo",
-    "Chris Duarte",
-    "Moses Moody",
-    "Corey Kispert",
-  ],
+  keys: ["PPG"],
   margin: {
-    top: 50,
+    top: 100,
     right: 120,
-    bottom: 50,
+    bottom: 150,
     left: 150,
   },
   defs: [
@@ -44,13 +29,13 @@ export default {
   fill: [
     {
       match: {
-        id: "Cade Cunningham",
+        id: "Jalen Green",
       },
       id: "dots",
     },
     {
       match: {
-        id: "Evan Mobley",
+        id: "Davion Mitchell",
       },
       id: "lines",
     },

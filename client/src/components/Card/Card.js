@@ -46,7 +46,8 @@ export default class Card extends Component {
     return (
       <>
         <article className="chart-contain">{/* <PERChart /> */}</article>
-        <ScatterPlot />
+        {/* <ScatterPlot /> */}
+        <Chart />
         <main className="container">
           {this.state.allPlayers.map((player) => {
             let playerData = { id: player.name };
@@ -94,19 +95,69 @@ export default class Card extends Component {
                     </p> */}
                       <div className="pcard__boxscore">
                         {/* <h3>PICK: {player.rank}</h3> */}
-                        <h3 className="pcard__item">PPG: {player.PTS}</h3>
-                        <h3 className="pcard__item">TRB: {player.TRB}</h3>
-                        <h3 className="pcard__item">3P%: {player.THREEp}</h3>
-                        <h3 className="pcard__item">AST: {player.AST}</h3>
-                        <h3 className="pcard__item">PER: {player.PER}</h3>
+                        <motion.h3
+                          className="pcard__item"
+                          whileHover={{ scale: 1.3, originX: 0, x: -20 }}
+                        >
+                          PPG: {player.PTS}
+                        </motion.h3>
+                        <motion.h3
+                          className="pcard__item"
+                          whileHover={{ scale: 1.3, originX: 0, x: -20 }}
+                        >
+                          TRB: {player.TRB}
+                        </motion.h3>
+                        <motion.h3
+                          className="pcard__item"
+                          whileHover={{ scale: 1.3, originX: 0, x: -20 }}
+                        >
+                          3P%: {player.THREEp}
+                        </motion.h3>
+                        <motion.h3
+                          className="pcard__item"
+                          whileHover={{ scale: 1.3, originX: 0, x: -20 }}
+                        >
+                          AST: {player.AST}
+                        </motion.h3>
+                        <motion.h3
+                          className="pcard__item"
+                          whileHover={{ scale: 1.3, originX: 0, x: -20 }}
+                        >
+                          PER: {player.PER}
+                        </motion.h3>
                       </div>
-                      <div className="next">{player.rank}</div>
+                      <motion.div
+                        className="next"
+                        whileHover={{ scale: 1.3, originX: 0, x: -20 }}
+                      >
+                        {player.rank}
+                      </motion.div>
                       <div className="pcard__graph-container">
-                        <img className="pcard__icon" src={hoops} />
-                        <img className="pcard__icon" src={athlete} />
-                        <img className="pcard__icon" src={bruiser} />
-                        <img className="pcard__icon" src={teamwork} />
-                        <img className="pcard__icon" src={iq} />
+                        <motion.img
+                          className="pcard__icon"
+                          src={hoops}
+                          whileHover={{ scale: 1.3, originX: 0, x: -20 }}
+                        />
+                        <motion.img
+                          className="pcard__icon"
+                          src={athlete}
+                          whileHover={{ scale: 1.3, originX: 0, x: -20 }}
+                        />
+                        <motion.img
+                          className="pcard__icon"
+                          src={bruiser}
+                          whileHover={{ scale: 1.3, originX: 0, x: -20 }}
+                        />
+                        <motion.img
+                          className="pcard__icon"
+                          src={teamwork}
+                          whileHover={{ scale: 1.3, originX: 0, x: -20 }}
+                        />
+                        <motion.img
+                          className="pcard__icon"
+                          src={iq}
+                          whileHover={{ scale: 1.3, originX: 0, x: -20 }}
+                        />
                       </div>
                     </article>
                   </div>
