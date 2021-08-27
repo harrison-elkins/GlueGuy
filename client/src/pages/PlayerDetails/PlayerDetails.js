@@ -30,7 +30,7 @@ export default class PlayerDetails extends React.Component {
   render() {
     console.log(this.state.singlePlayer);
     return (
-      <>
+      <section>
         {this.state.singlePlayer && (
           <main className="details-container">
             <section className="dets">
@@ -56,99 +56,155 @@ export default class PlayerDetails extends React.Component {
             <article className="dets__stats">
               <div className="dets__box">
                 <h4 className="dets__box-head">Basic Metrics</h4>
-                <div className="dets__box-item">
+                <motion.div
+                  className="dets__box-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.PTS}</strong> PPG
-                </div>
-                <div className="dets__box-item">
+                </motion.div>
+                <motion.div
+                  className="dets__box-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.FGp} </strong>
                   FG%
-                </div>
-                <div className="dets__box-item">
+                </motion.div>
+                <motion.div
+                  className="dets__box-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.THREEp}</strong> 3P%
-                </div>
-                <strong>
-                  <div className="dets__box-item">
-                    {this.state.singlePlayer?.TRB}
-                  </div>
-                </strong>{" "}
-                Rebounds
-                <strong>
-                  <div className="dets__box-item">
-                    {this.state.singlePlayer?.STL}
-                  </div>
-                </strong>{" "}
-                Steals
-                <strong>
-                  <div className="dets__box-item">
-                    {this.state.singlePlayer?.BLK}
-                  </div>
-                </strong>{" "}
-                Blocks
+                </motion.div>
+                <motion.div
+                  className="dets__box-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
+                  <strong>{this.state.singlePlayer?.TRB}</strong> Rebounds
+                </motion.div>
+                <motion.div
+                  className="dets__box-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
+                  <strong>{this.state.singlePlayer?.STL}</strong> Steals
+                </motion.div>
+                <motion.div
+                  className="dets__box-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
+                  <strong>{this.state.singlePlayer?.BLK}</strong> Blocks
+                </motion.div>
               </div>
 
               <div className="dets__adv">
                 <h4 className="dets__box-head">Advanced Metrics</h4>
-                <div className="dets__adv-item">
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.TSP}</strong> True Shooting
                   %
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.eFG}</strong> Efficient FG%
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.eORB}</strong> Offensive
                   Rebound %
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.eDRB}</strong> Defensive
                   Rebound %
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.eTRB}</strong> Total Rebound
                   %
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.eAST}</strong> Assist %
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.eTOV}</strong> Avg Turnover
                   Rate
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.eUSG}</strong> Player Usage
                   %
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.TTLS}</strong> Total
                   Shooting
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.PPR}</strong> Pure Point
                   Rating
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.PPS}</strong> Points Per
                   Shot
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.ORtg}</strong> Offensive
                   Rating
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.DRtg}</strong> Defensive
                   Rating
-                </div>
-                <div className="dets__adv-item">
+                </motion.div>
+                <motion.div
+                  className="dets__adv-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.PER}</strong> Player
                   Effeciency Rating
-                </div>
+                </motion.div>
               </div>
-              <Chart />
+              {/* <Chart /> */}
             </article>
-            {/* {this.state.playerData && <Radar data={this.state.radarData} />} */}
           </main>
         )}
-      </>
+        <div className="radar-div">
+          <Radar />
+        </div>
+        <div className="scatter-div">
+          <ScatterPlot />
+        </div>
+      </section>
     );
   }
 }

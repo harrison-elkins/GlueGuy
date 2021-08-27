@@ -17,7 +17,6 @@
   margin-top: 100px;
   filter: grayscale(100%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  position: relative;
 
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -40,11 +39,16 @@
     flex-direction: column;
   }
   &__pick {
-    background-color: #d6d6d6;
-    border: none;
-    &-image {
-      height: 40px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
   }
   &__name {
     font-size: 24px;
@@ -69,20 +73,20 @@
     max-width: 100%;
   }
   &__right-block {
-    width: 65%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: space-between;
-    justify-content: center;
   }
   &__boxscore {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   &__item {
     font-size: 18px;
+    padding: 0 20px;
   }
 
   &__desc {
@@ -94,19 +98,19 @@
   }
   &__graph-container {
     margin-top: 40px;
-    flex-direction: flex-start;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-evenly;
   }
-  &__icon {
+  &__graph {
     height: 60px;
     width: 60px;
+    margin-right: 85px;
   }
   &__toggle {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-
+    background-color: #deaaff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,20 +119,9 @@
     bottom: -25px;
   }
 
-  .next {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: -30px;
-    top: 20px;
-    background-color: #242423;
+  .down {
+    width: 20px;
+    height: 20px;
     color: white;
-    font-size: 18px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-image: url("../../assets/right-arrow.png");
   }
 }

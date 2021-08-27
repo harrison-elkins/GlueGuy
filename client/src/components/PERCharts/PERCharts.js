@@ -34,7 +34,7 @@ class PERChart extends React.Component {
           theme={{
             background: "#242423",
             textColor: "#fff",
-            fontFamily: "Avenir",
+            fontFamily: "Futura",
             fontSize: 15,
             axis: {
               domain: {

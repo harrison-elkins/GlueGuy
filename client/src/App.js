@@ -1,11 +1,10 @@
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./components/Home/Home";
+import ResponsiveCards from "./components/ResponsiveCards/ResponsiveCards";
 import Header from "./components/Header/Header";
-import SignUp from "./pages/SignUp/SignUp";
-import Login from "./pages/Login/Login";
 import Card from "./components/Card/Card";
 import PlayerDetails from "./pages/PlayerDetails/PlayerDetails";
+
 function App() {
   return (
     <div className="App">

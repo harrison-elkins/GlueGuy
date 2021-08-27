@@ -9,35 +9,41 @@ class Radar extends Component {
       <div class="radar">
         <ResponsiveRadar
           data={data}
-          keys={["Cade Cunningham"]}
+          keys={[
+            "Cade Cunningham",
+            "Jalen Green",
+            "Evan Mobley",
+            "Scottie Barnes",
+            "Jalen Suggs",
+          ]}
           indexBy="stat"
-          maxValue="80"
+          maxValue="auto"
           margin={{ top: 70, right: 80, bottom: 40, left: 80 }}
           curve="linearClosed"
           borderWidth={2}
           borderColor={{ from: "color" }}
           gridLevels={3}
-          gridShape="circular"
+          gridShape="linear"
           gridLabelOffset={36}
           enableDots={true}
-          dotSize={10}
+          dotSize={15}
           dotColor={{ theme: "background" }}
           dotBorderWidth={2}
           dotBorderColor={{ from: "color" }}
           enableDotLabel={true}
           dotLabel="value"
           dotLabelYOffset={-12}
-          colors={{ scheme: "paired" }}
-          fillOpacity={0.5}
+          colors={{ scheme: "nivo" }}
+          fillOpacity={0.8}
           blendMode="multiply"
           animate={true}
           motionConfig="wobbly"
           isInteractive={true}
           theme={{
-            background: "#5e60ce",
+            background: "#242423",
             textColor: "#fff",
-            fontFamily: "Avenir",
-            fontSize: 10,
+            fontFamily: "Futura",
+            fontSize: 15,
             axis: {
               domain: {
                 line: {
