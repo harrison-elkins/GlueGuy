@@ -13,7 +13,7 @@ import data, { getPlayers, like } from "../../utils/dataUtils";
 import React, { Component } from "react";
 import PERChart from "../PERCharts/PERCharts";
 import ScatterPlot from "../ScatterPlot/ScatterPlot";
-import Chart from "../chart/Chart";
+import ShootingChart from "../../components/ShootingChart/ShootingChart";
 import axios from "axios";
 const emoji = require("node-emoji");
 
@@ -47,7 +47,7 @@ export default class Card extends Component {
       <>
         <article className="chart-contain">{/* <PERChart /> */}</article>
         {/* <ScatterPlot /> */}
-        <Chart />
+        <ShootingChart />
         <main className="container">
           {this.state.allPlayers.map((player) => {
             let playerData = { id: player.name };
@@ -63,6 +63,7 @@ export default class Card extends Component {
                   <motion.div className="pcard__top">
                     <div className="pcard__name-wrap">
                       <h4 className="pcard__name">{player.name}</h4>
+                      <img src={player.status} />
                       <p className="pcard__team">{player.team}</p>
                     </div>
 

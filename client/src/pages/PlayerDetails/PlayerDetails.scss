@@ -40,6 +40,17 @@ section {
     margin-top: 48px;
     font-size: 18px;
   }
+  &__odds {
+    padding-top: 200px;
+  }
+  &__odds-current {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 48px;
+    &:hover {
+      color: #52b788;
+    }
+  }
   &__box {
     padding-bottom: 100px;
     width: 250px;

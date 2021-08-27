@@ -4,6 +4,7 @@ import React from "react";
 import Radar from "../../components/radar/Radar";
 import PERChart from "../../components/PERCharts/PERCharts";
 import Chart from "../../components/chart/Chart";
+import ShootingChart from "../../components/ShootingChart/ShootingChart";
 import { motion } from "framer-motion";
 import ScatterPlot from "../../components/ScatterPlot/ScatterPlot";
 
@@ -47,6 +48,16 @@ export default class PlayerDetails extends React.Component {
                     "{this.state.singlePlayer?.desc}" -Kevin O' Connor, The
                     Ringer
                   </h3>
+                  <div className="dets__odds">
+                    <motion.h4
+                      className="dets__odds-current"
+                      whileHover={{ scale: 1.75, originX: 0, y: -10 }}
+                    >
+                      {this.state.singlePlayer?.ROYodds}
+                    </motion.h4>
+                    <h4 className="dets__odds-head">Odds to win ROY</h4>
+                    <p className="dets__odds-book">-DRAFTKINGS, 08/27/21</p>
+                  </div>
                 </div>
               </article>
               {this.state.playerData && (
@@ -203,6 +214,9 @@ export default class PlayerDetails extends React.Component {
         </div>
         <div className="scatter-div">
           <ScatterPlot />
+        </div>
+        <div>
+          <Chart />
         </div>
       </section>
     );

@@ -20,6 +20,12 @@ const playerSchema = new mongoose.Schema(
     image: {
       type: String,
     },
+    status: {
+      type: String,
+    },
+    ROYodds: {
+      type: String,
+    },
     desc: {
       type: String,
       required: true,

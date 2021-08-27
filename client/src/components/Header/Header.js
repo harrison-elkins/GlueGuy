@@ -7,7 +7,12 @@ export default function Header() {
   return (
     <header className="header">
       <Link to="/">
-        <motion.h2 className="logo" initial={{ x: -1000 }} animate={0}>
+        <motion.h2
+          className="logo"
+          initial={{ x: 10000 }}
+          animate={{ x: 0 }}
+          transition={{ delay: 1, duration: 1, type: "spring" }}
+        >
           GlueGuy
         </motion.h2>
       </Link>
