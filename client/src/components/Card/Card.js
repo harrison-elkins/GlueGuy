@@ -15,6 +15,7 @@ import PERChart from "../PERCharts/PERCharts";
 import ScatterPlot from "../ScatterPlot/ScatterPlot";
 import ShootingChart from "../../components/ShootingChart/ShootingChart";
 import axios from "axios";
+import SearchBar from "../SearchBar/SearchBar";
 const emoji = require("node-emoji");
 
 export default class Card extends Component {
@@ -64,7 +65,10 @@ export default class Card extends Component {
                     <div className="pcard__name-wrap">
                       <h4 className="pcard__name">{player.name}</h4>
                       <img src={player.status} />
-                      <p className="pcard__team">{player.team}</p>
+                      <div className="pcard__team-container">
+                        <p className="pcard__team">{player.team}</p>
+                        <p className="pcard__position">{player.position}</p>
+                      </div>
                     </div>
 
                     <div className="pcard__pick">
@@ -88,6 +92,25 @@ export default class Card extends Component {
                   <div className="pcard__bottom">
                     <div className="pcard__left-block">
                       <img className="pcard__image" src={player.image} />
+                      <div className="pcard__bio">
+                        <div className="pcard__measurables">
+                          <p className="pcard__height">
+                            <strong>HEIGHT</strong> {player.height}
+                          </p>
+                          <p className="pcard__wingspan">
+                            <strong>WINGSPAN </strong>
+                            {player.wingspan}
+                          </p>
+                        </div>
+                        <div className="pcard__age-container">
+                          <p className="pcard__age">
+                            <strong>AGE</strong> {player.age}
+                          </p>
+                          {/* <p className="pcard__position">
+                            POSITION:{player.position}
+                          </p> */}
+                        </div>
+                      </div>
                     </div>
                     <article className="pcard__right-block">
                       {/* <p className="pcard__desc">

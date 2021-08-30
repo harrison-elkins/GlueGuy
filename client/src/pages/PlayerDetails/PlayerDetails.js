@@ -28,6 +28,10 @@ export default class PlayerDetails extends React.Component {
       });
   }
 
+  handleChange = (e) => {
+    this.setState({ search: e.target.value });
+  };
+
   render() {
     console.log(this.state.singlePlayer);
     return (

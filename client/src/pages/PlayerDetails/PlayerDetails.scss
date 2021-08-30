@@ -62,6 +62,9 @@ section {
   }
   &__box-item {
     padding-top: 16px;
+    &:hover {
+      color: #f9c74f;
+    }
   }
   &__box-head {
     padding-bottom: 24px;
@@ -70,6 +73,9 @@ section {
   }
   &__adv-item {
     padding-top: 16px;
+    &:hover {
+      color: #f9c74f;
+    }
   }
   &__stats {
     display: flex;

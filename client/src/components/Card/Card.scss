@@ -50,6 +50,15 @@
     font-size: 24px;
     text-transform: uppercase;
   }
+  &__team-container {
+    display: flex;
+  }
+  &__team {
+    padding-right: 16px;
+  }
+  &__position {
+    font-weight: 500;
+  }
   &__bottom {
     display: flex;
     height: 250px;
@@ -61,19 +70,59 @@
     background-color: #f5f3f4;
   }
   &__left-block {
-    height: 175px;
-    width: 25%;
+    height: 200px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
   }
   &__image {
     max-height: 100%;
     max-width: 100%;
+    background-color: #f5f3f4;
+    opacity: 0.8;
+    border-radius: 15px;
+    background-size: 10px 10px;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #f9844a 0,
+      #f9844a 1px,
+      #f5f3f4 0,
+      #f5f3f4 50%
+    );
+  }
+  &__bio {
+    // border: 1px solid hotpink;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+    border-top: 2px solid black;
+    display: flex;
+    padding-top: 0;
+    margin-top: 0;
+    justify-content: space-around;
+    font-size: 14px;
+  }
+  &__measurables {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4px;
+    padding-top: 4px;
+  }
+  &__height {
+    padding-bottom: 4px;
+  }
+
+  &__age-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
   }
   &__right-block {
-    width: 65%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: space-between;
-    justify-content: center;
+    justify-content: space-between;
   }
   &__boxscore {
     display: flex;
@@ -93,8 +142,8 @@
     text-align: left;
   }
   &__graph-container {
+    display: flex;
     margin-top: 40px;
-    flex-direction: flex-start;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -106,7 +155,6 @@
     height: 50px;
     width: 50px;
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;

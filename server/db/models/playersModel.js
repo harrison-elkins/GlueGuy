@@ -26,6 +26,18 @@ const playerSchema = new mongoose.Schema(
     ROYodds: {
       type: String,
     },
+    position: {
+      type: String,
+    },
+    height: {
+      type: String,
+    },
+    wingspan: {
+      type: String,
+    },
+    age: {
+      type: Number,
+    },
     desc: {
       type: String,
       required: true,
