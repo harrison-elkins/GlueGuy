@@ -46,8 +46,6 @@ export default class Card extends Component {
   render() {
     return (
       <>
-        <article className="chart-contain">{/* <PERChart /> */}</article>
-        {/* <ScatterPlot /> */}
         <ShootingChart />
         <main className="container">
           {this.state.allPlayers.map((player) => {

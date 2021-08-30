@@ -1,14 +1,12 @@
 ---
 
-PROJECT TITLE:
-
-GlueGuy
+**GlueGuy**
 
 "Bringing fans closer to the players and game they love."
 
 ---
 
-DESCRIPTION:
+**DESCRIPTION:**
 
 For this project, I built a database using MongoDB that focuses on the NBA Summer League--specifically, the top 15 players from the 2021 NBA draft class.
 
@@ -18,7 +16,7 @@ Nivo was used to construct the charts and graphs.
 
 ---
 
-BUILT WITH:
+**BUILD:**
 
 - MongoDB
 - Express
@@ -31,27 +29,35 @@ BUILT WITH:
 
 ---
 
-FEATURES:
+**FEATURES:**
 
 In-depth analysis into the players in their first few games on the professional stage. Charts and advanced analytics for each player, as well as up-to-date gambling odds.
 
 ---
 
-Installation:
+**Installation:**
 
+In Terminal, navigate to the directory you want the clone to live
+Fork this repo
+
+Once you have forked the above repo,
 $ git clone git@github.com:harrison-elkins/harrison-elkins-capstone.git
 
-// Open on local editor
+cd into harrison-elkins-capstone
 
-$ npm install
+cd client && npm i
 
-// Run on local server
+cd ..
 
-$ npm start
+cd server && npm i
+
+cp .env.sample .env
+
+in your .env file, add a value for your JWT_SECRET env variable - choose any value
 
 ---
 
-CREDITS:
+**CREDITS:**
 
 // for data
 
