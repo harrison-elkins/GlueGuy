@@ -57,6 +57,27 @@ in your .env file, add a value for your JWT_SECRET env variable - choose any val
 
 ---
 
+**Database Seeding**
+
+in Terminal, cd server
+run npm run db:reset
+
+**RUN SERVER**
+
+In a new Terminal window/tab, cd into the directory with the clone
+cd harrison-elkins-capstone
+cd server
+run npm run dev
+
+**RUN CLIENT**
+
+In a new Terminal window/tab, cd into the directory with the clone
+cd harrison-elkins-capstone
+cd client
+run npm start
+
+---
+
 **CREDITS:**
 
 // for data
