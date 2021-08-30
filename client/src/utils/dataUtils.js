@@ -5,3 +5,5 @@ export const home = () => axios.get(`/`);
 export const getPlayers = () => axios.get(`/api/players`);
 
 export const getSinglePlayer = (id) => axios.get(`/api/players/${id}`);
+
+export const like = (id) => axios.patch(`/api/players/${id}`);

@@ -20,6 +20,24 @@ const playerSchema = new mongoose.Schema(
     image: {
       type: String,
     },
+    status: {
+      type: String,
+    },
+    ROYodds: {
+      type: String,
+    },
+    position: {
+      type: String,
+    },
+    height: {
+      type: String,
+    },
+    wingspan: {
+      type: String,
+    },
+    age: {
+      type: Number,
+    },
     desc: {
       type: String,
       required: true,

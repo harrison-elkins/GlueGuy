@@ -1,5 +1,5 @@
 export default {
-  keys: ["PPG"],
+  keys: ["3P%", "PPS"],
   margin: {
     top: 100,
     right: 120,

@@ -1,11 +1,10 @@
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./components/Home/Home";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
-import SignUp from "./pages/SignUp/SignUp";
-import Login from "./pages/Login/Login";
 import Card from "./components/Card/Card";
 import PlayerDetails from "./pages/PlayerDetails/PlayerDetails";
+
 function App() {
   return (
     <div className="App">
@@ -15,6 +14,7 @@ function App() {
           <Route path="/" exact component={Card} />
           <Route path="/playerdetails/:id" exact component={PlayerDetails} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </div>
   );

@@ -20,4 +20,17 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.patch("/players/upvote/:id", async (req, res) => {
+  console.log(req.params.id);
+  try {
+    const upvotedPlayer = await Player.findByIdAndUpdate(req.params.id, {
+      $inc: { upvotes: 1 },
+    });
+    console.log(upvotedPlayer);
+    res.json(upvotedPlayer);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 module.exports = router;

@@ -1,11 +1,11 @@
 import { ResponsiveBar } from "@nivo/bar";
 import React from "react";
 
-import "./Chart.css";
-import data from "./Data";
+import "./ShootingChart.scss";
+import data from "./ShootingChartData.js";
 import config from "./Config.js";
 
-class Chart extends React.Component {
+class ShootingChart extends React.Component {
   render() {
     return (
       <div class="chart">
@@ -63,4 +63,4 @@ class Chart extends React.Component {
   }
 }
 
-export default Chart;
+export default ShootingChart;

@@ -3,19 +3,6 @@ const { Router } = require("express");
 const Player = require("../../db/models/playersModel");
 const User = require("../../db/models/usersModel");
 
-router.patch("/players/upvote/:id", async (req, res) => {
-  console.log(req.params.id);
-  try {
-    const upvotedPlayer = await Player.findByIdAndUpdate(req.params.id, {
-      $inc: { upvotes: 1 },
-    });
-    console.log(upvotedPlayer);
-    res.json(upvotedPlayer);
-  } catch (error) {
-    res.status(400).json({ message: error.message });
-  }
-});
-
 //Get Current User
 router.get("/current", async (req, res) => {
   console.log(req.decoded);
