@@ -1,5 +1,4 @@
 export default {
-  // keys: ["Cade Cunningham", "Group Average"],
   margin: {
     top: 70,
     right: 60,

@@ -12,7 +12,7 @@ class Chart extends React.Component {
         <ResponsiveBar
           data={data}
           keys={config.keys}
-          indexBy="player"
+          indexBy="id"
           margin={config.margin}
           padding={0.3}
           colors={{ scheme: "nivo" }}

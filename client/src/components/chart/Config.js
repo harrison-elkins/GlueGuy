@@ -29,13 +29,13 @@ export default {
   fill: [
     {
       match: {
-        id: "Jalen Green",
+        player: "Jalen Green",
       },
       id: "dots",
     },
     {
       match: {
-        id: "Davion Mitchell",
+        player: "Davion Mitchell",
       },
       id: "lines",
     },
