@@ -1,8 +1,6 @@
 ---
 
-**TITLE:**
-
-GlueGuy
+**GlueGuy**
 
 "Bringing fans closer to the players and game they love."
 

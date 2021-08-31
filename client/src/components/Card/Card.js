@@ -1,8 +1,8 @@
 import "./Card.scss";
-import graph from "../../assets/graph.png";
 import hoops from "../../assets/hoops.png";
 import defender from "../../assets/athlete.png";
 import iq from "../../assets/artificial-intelligence.png";
+import CustomizedTooltips from "../Tooltip/Tooltip";
 import court from "../../assets/basketball.png";
 import teamwork from "../../assets/teamwork.png";
 import bruiser from "../../assets/strugglecolor.png";
@@ -11,11 +11,14 @@ import next from "../../assets/right-arrow-1.png";
 import { motion } from "framer-motion";
 import data, { getPlayers, like } from "../../utils/dataUtils";
 import React, { Component } from "react";
-import PERChart from "../PERCharts/PERCharts";
+import { Link } from "react-router-dom";
 import ScatterPlot from "../ScatterPlot/ScatterPlot";
 import ShootingChart from "../../components/ShootingChart/ShootingChart";
 import axios from "axios";
 import SearchBar from "../SearchBar/SearchBar";
+import TransitionsModal from "../Modal/Modal";
+import Tooltip from "@material-ui/core/Tooltip";
+import Typography from "@material-ui/core/Typography";
 const emoji = require("node-emoji");
 
 export default class Card extends Component {
@@ -47,6 +50,7 @@ export default class Card extends Component {
     return (
       <>
         <ShootingChart />
+
         <main className="container">
           {this.state.allPlayers.map((player) => {
             let playerData = { id: player.name };
@@ -61,7 +65,20 @@ export default class Card extends Component {
                   <motion.div className="pcard__top">
                     <div className="pcard__name-wrap">
                       <div className="pcard__icon-wrap">
-                        <h4 className="pcard__name">{player.name}</h4>
+                        <Tooltip
+                          interactive
+                          title={
+                            <>
+                              <Typography color="inherit">
+                                {player.name}
+                              </Typography>
+                              {`The ${player.rank} overall pick. Second-Team
+                              All-Summer-League selction.`}
+                            </>
+                          }
+                        >
+                          <h4 className="pcard__name">{player.name}</h4>
+                        </Tooltip>
                         <motion.img
                           className="pcard__status"
                           src={player.status}
@@ -70,6 +87,7 @@ export default class Card extends Component {
                       </div>
                       <div className="pcard__team-container">
                         <p className="pcard__team">{player.team}</p>
+
                         <p className="pcard__position">{player.position}</p>
                       </div>
                     </div>
