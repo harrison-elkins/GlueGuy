@@ -36,24 +36,19 @@ In-depth analysis into the players in their first few games on the professional 
 
 **Installation:**
 
-In Terminal, navigate to the directory you want the clone to live
-Fork this repo
+In Terminal, navigate to the directory you want the clone to live Fork this repo
 
-Once you have forked the above repo,
-$ git clone git@github.com:harrison-elkins/harrison-elkins-capstone.git
+Once you have forked the above repo, git clone the repo
 
-cd into harrison-elkins-capstone
+cd harrison-elkins-capstone
 
 cd client && npm i
 
-cd ..
+cd .. && npm i
 
-cd server && npm i
+cp sample.env .env
 
-cp .env.sample .env
-
-in your .env file, add a value for your JWT_SECRET env variable - choose any value
-
+in your .env file, add a value for your JWT_SECRET env variable - choose any value. Insert a valid MongoDB URL.
 ---
 
 **Database Seeding**
