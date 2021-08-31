@@ -10,11 +10,26 @@ class ScatterPlot extends Component {
         <ResponsiveScatterPlot
           data={data}
           colors={{ scheme: "set3" }}
-          nodeSize={18}
+          nodeSize={25}
           animate={true}
           motionConfig="wobbly"
           isInteractive={true}
           itemOpactity={1}
+          tooltip={({ node }) => (
+            <div
+              style={{
+                color: node.style.color,
+                background: "#333",
+                padding: "16px 18px",
+              }}
+            >
+              <strong>{node.id}</strong>
+              <br />
+              {`x: ${node.data.formattedX}`}
+              <br />
+              {`y: ${node.data.formattedY}`}
+            </div>
+          )}
           theme={{
             background: "#242423",
             textColor: "#fff",

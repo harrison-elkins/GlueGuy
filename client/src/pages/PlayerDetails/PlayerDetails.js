@@ -100,6 +100,12 @@ export default class PlayerDetails extends React.Component {
                   className="dets__box-item"
                   whileHover={{ scale: 2, originX: 0, y: -10 }}
                 >
+                  <strong>{this.state.singlePlayer?.AST}</strong> Assists
+                </motion.div>
+                <motion.div
+                  className="dets__box-item"
+                  whileHover={{ scale: 2, originX: 0, y: -10 }}
+                >
                   <strong>{this.state.singlePlayer?.STL}</strong> Steals
                 </motion.div>
                 <motion.div

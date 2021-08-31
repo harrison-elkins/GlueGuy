@@ -27,7 +27,7 @@ class Radar extends Component {
           gridLabelOffset={36}
           enableDots={true}
           dotSize={15}
-          dotColor={{ theme: "background" }}
+          // dotColor={{ theme: "background" }}
           dotBorderWidth={2}
           dotBorderColor={{ from: "color" }}
           enableDotLabel={true}

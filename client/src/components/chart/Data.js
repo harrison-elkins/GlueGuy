@@ -1,58 +1,55 @@
 export default [
+  { id: "Cade Cunningham", PPG: 18.7 },
   {
-    player: "Cade Cunningham",
-    PPG: 18.7,
-  },
-  {
-    player: "Jalen Green",
+    id: "Jalen Green",
     PPG: 20.3,
   },
   {
-    player: "Evan Mobley",
+    id: "Evan Mobley",
     PPG: 11.3,
   },
   {
-    player: "Scottie Barnes",
+    id: "Scottie Barnes",
     PPG: 15.5,
   },
   {
-    player: "Jalen Suggs",
+    id: "Jalen Suggs",
     PPG: 15.3,
   },
   {
-    player: "Jonathan Kuminga",
+    id: "Jonathan Kuminga",
     PPG: 17.25,
   },
   {
-    player: "Franz Wagner",
+    id: "Franz Wagner",
     PPG: 8,
   },
   {
-    player: "Davion Mitchell",
+    id: "Davion Mitchell",
     PPG: 12.3,
   },
   {
-    player: "Zaire Williams",
+    id: "Zaire Williams",
     PPG: 12.5,
   },
   {
-    player: "James Bouknight",
+    id: "James Bouknight",
     PPG: 16.75,
   },
   {
-    player: "Joshua Primo",
+    id: "Joshua Primo",
     PPG: 14.25,
   },
   {
-    player: "Chris Duarte",
+    id: "Chris Duarte",
     PPG: 18.25,
   },
   {
-    player: "Moses Moody",
+    id: "Moses Moody",
     PPG: 16.5,
   },
   {
-    player: "Corey Kispert",
+    id: "Corey Kispert",
     PPG: 9.5,
   },
 ];

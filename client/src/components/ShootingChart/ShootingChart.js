@@ -31,6 +31,19 @@ class ShootingChart extends React.Component {
           motionStiffness={90}
           motionDamping={15}
           legends={config.legends}
+          tooltip={({ id, value, color }) => (
+            <div
+              style={{
+                padding: 12,
+                color,
+                background: "#222222",
+              }}
+            >
+              <strong>
+                {id}: {value}
+              </strong>
+            </div>
+          )}
           theme={{
             background: "#242423",
             textColor: "#fff",

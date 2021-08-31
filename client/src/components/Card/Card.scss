@@ -46,9 +46,22 @@
       height: 40px;
     }
   }
+  &__icon-wrap {
+    display: flex;
+    align-items: center;
+  }
   &__name {
     font-size: 24px;
     text-transform: uppercase;
+  }
+  &__status {
+    height: 30px;
+    width: 30px;
+    margin-left: 16px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: none;
   }
   &__team-container {
     display: flex;
