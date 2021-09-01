@@ -2,7 +2,8 @@ import "./Card.scss";
 import hoops from "../../assets/hoops.png";
 import defender from "../../assets/athlete.png";
 import iq from "../../assets/artificial-intelligence.png";
-import CustomizedTooltips from "../Tooltip/Tooltip";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
+import CustomizedTooltip from "../Tooltip/Tooltip";
 import court from "../../assets/basketball.png";
 import teamwork from "../../assets/teamwork.png";
 import bruiser from "../../assets/strugglecolor.png";
@@ -12,7 +13,7 @@ import { motion } from "framer-motion";
 import data, { getPlayers, like } from "../../utils/dataUtils";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import ScatterPlot from "../ScatterPlot/ScatterPlot";
+import Hero from "../Hero/Hero";
 import ShootingChart from "../../components/ShootingChart/ShootingChart";
 import axios from "axios";
 import SearchBar from "../SearchBar/SearchBar";
@@ -25,6 +26,21 @@ export default class Card extends Component {
   state = {
     allPlayers: [],
   };
+
+  Tooltip = withStyles((theme) => ({
+    arrow: {
+      color: "#242423",
+    },
+    tooltip: {
+      backgroundColor: "#242423",
+      arrow: "#242423",
+      color: "#fff",
+      width: 200,
+      height: 200,
+      fontSize: theme.typography.pxToRem(16),
+      border: "1px solid #dadde9",
+    },
+  }))(Tooltip);
 
   componentDidMount() {
     getPlayers()
@@ -49,8 +65,8 @@ export default class Card extends Component {
   render() {
     return (
       <>
-        <ShootingChart />
-
+        <Hero />
+        {/* <ShootingChart /> */}
         <main className="container">
           {this.state.allPlayers.map((player) => {
             let playerData = { id: player.name };
@@ -58,6 +74,7 @@ export default class Card extends Component {
             return (
               <>
                 <motion.div
+                  id="players"
                   whileHover={{ scale: 1.025 }}
                   transition={{ duration: 0.3 }}
                   className="pcard"
@@ -65,20 +82,8 @@ export default class Card extends Component {
                   <motion.div className="pcard__top">
                     <div className="pcard__name-wrap">
                       <div className="pcard__icon-wrap">
-                        <Tooltip
-                          interactive
-                          title={
-                            <>
-                              <Typography color="inherit">
-                                {player.name}
-                              </Typography>
-                              {`The ${player.rank} overall pick. Second-Team
-                              All-Summer-League selction.`}
-                            </>
-                          }
-                        >
-                          <h4 className="pcard__name">{player.name}</h4>
-                        </Tooltip>
+                        <h4 className="pcard__name">{player.name}</h4>
+
                         <motion.img
                           className="pcard__status"
                           src={player.status}
@@ -112,28 +117,48 @@ export default class Card extends Component {
                     </div>
                   </motion.div>
                   <div className="pcard__bottom">
-                    <motion.div
-                      className="pcard__left-block"
-                      whileHover={{ scale: 1.1 }}
+                    <this.Tooltip
+                      arrow
+                      interactive
+                      placement="left"
+                      PopperProps={{
+                        modifiers: {
+                          offset: {
+                            enabled: true,
+                            offset: "0px 60px",
+                          },
+                        },
+                      }}
+                      title={
+                        <>
+                          {`The # ${player.rank} overall pick. Second-Team
+                              All-Summer-League selction.`}
+                        </>
+                      }
                     >
-                      <img className="pcard__image" src={player.image} />
-                      <div className="pcard__bio">
-                        <div className="pcard__measurables">
-                          <p className="pcard__height">
-                            <strong>HEIGHT</strong> {player.height}
-                          </p>
-                          <p className="pcard__wingspan">
-                            <strong>WINGSPAN </strong>
-                            {player.wingspan}
-                          </p>
-                        </div>
-                        <div className="pcard__age-container">
-                          <p className="pcard__age">
-                            <strong>AGE</strong> {player.age}
-                          </p>
+                      <div
+                        className="pcard__left-block"
+                        whileHover={{ scale: 1.1 }}
+                      >
+                        <img className="pcard__image" src={player.image} />
+                        <div className="pcard__bio">
+                          <div className="pcard__measurables">
+                            <p className="pcard__height">
+                              <strong>HEIGHT</strong> {player.height}
+                            </p>
+                            <p className="pcard__wingspan">
+                              <strong>WINGSPAN </strong>
+                              {player.wingspan}
+                            </p>
+                          </div>
+                          <div className="pcard__age-container">
+                            <p className="pcard__age">
+                              <strong>AGE</strong> {player.age}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </this.Tooltip>
                     <article className="pcard__right-block">
                       <div className="pcard__boxscore">
                         <motion.h3
