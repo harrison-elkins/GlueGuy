@@ -20,28 +20,28 @@ const Home = () => {
 
   console.log(players);
 
-  //   useEffect(() => {
-  //     async function fetchData() {
-  //       const request = await getPlayers();
-  //       console.log(request);
-  //       setPlayers(request);
-  //       return request;
-  //     }
-  //     fetchData();
-  //   }, []);
+  useEffect(() => {
+    async function fetchData() {
+      const request = await getPlayers();
+      console.log(request);
+      setPlayers(request);
+      return request;
+    }
+    fetchData();
+  }, []);
 
-  //   console.log(players);
+  console.log(players);
 
-  //   useEffect(() => {
-  //     axios
-  //       .get("http://localhost:8080/api/players")
-  //       .then((data) => {
-  //         console.log(data);
-  //       })
-  //       .then((data) => {
-  //         setPlayers(data);
-  //       });
-  //   }, []);
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/api/players")
+      .then((data) => {
+        console.log(data);
+      })
+      .then((data) => {
+        setPlayers(data);
+      });
+  }, []);
 
   return (
     <div className="home">

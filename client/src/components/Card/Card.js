@@ -1,6 +1,5 @@
 import "./Card.scss";
 import hoops from "../../assets/hoops.png";
-import defender from "../../assets/athlete.png";
 import iq from "../../assets/artificial-intelligence.png";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import CustomizedTooltip from "../Tooltip/Tooltip";
@@ -20,6 +19,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import TransitionsModal from "../Modal/Modal";
 import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography";
+import PieChart from "../PieChart/PieChart";
 const emoji = require("node-emoji");
 
 export default class Card extends Component {
@@ -66,6 +66,7 @@ export default class Card extends Component {
     return (
       <>
         <Hero />
+
         {/* <ShootingChart /> */}
         <main className="container">
           {this.state.allPlayers.map((player) => {

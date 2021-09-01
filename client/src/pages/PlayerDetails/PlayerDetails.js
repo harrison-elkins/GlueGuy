@@ -7,6 +7,7 @@ import Chart from "../../components/chart/Chart";
 import ShootingChart from "../../components/ShootingChart/ShootingChart";
 import { motion } from "framer-motion";
 import ScatterPlot from "../../components/ScatterPlot/ScatterPlot";
+import ResponsivePieChart from "../../components/ResponisivePie/ResponsivePie";
 
 export default class PlayerDetails extends React.Component {
   state = {
@@ -60,7 +61,7 @@ export default class PlayerDetails extends React.Component {
                       {this.state.singlePlayer?.ROYodds}
                     </motion.h4>
                     <h4 className="dets__odds-head">Odds to win ROY</h4>
-                    <p className="dets__odds-book">-DRAFTKINGS, 08/27/21</p>
+                    <p className="dets__odds-book">-DRAFTKINGS, 09/01/21</p>
                   </div>
                 </div>
               </article>
@@ -220,7 +221,8 @@ export default class PlayerDetails extends React.Component {
           </main>
         )}
         <div className="radar-div">
-          <Radar />
+          {/* <Radar /> */}
+          <ResponsivePieChart />
         </div>
         <div className="scatter-div">
           <ScatterPlot />

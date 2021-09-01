@@ -10,7 +10,7 @@ class ScatterPlot extends Component {
         <ResponsiveScatterPlot
           data={data}
           colors={{ scheme: "set3" }}
-          nodeSize={25}
+          nodeSize={20}
           animate={true}
           motionConfig="wobbly"
           isInteractive={true}
@@ -82,6 +82,7 @@ class ScatterPlot extends Component {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
+            fontSize: 15,
             legend: "eFG%",
             legendPosition: "middle",
             legendOffset: -60,
