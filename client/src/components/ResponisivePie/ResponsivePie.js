@@ -47,7 +47,7 @@ const ResponsivePieChart = () => (
           id: "dots",
           type: "patternDots",
           background: "inherit",
-          color: "rgba(255, 255, 255, 0.3)",
+          color: "rgba(255, 255, 255, 0.8)",
           size: 4,
           padding: 1,
           stagger: true,
@@ -65,7 +65,7 @@ const ResponsivePieChart = () => (
       fill={[
         {
           match: {
-            id: "",
+            id: "Jalen Green",
           },
           id: "dots",
         },

@@ -4,7 +4,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Card from "./components/Card/Card";
 import PlayerDetails from "./pages/PlayerDetails/PlayerDetails";
-import ResponsivePieChart from "./components/ResponisivePie/ResponsivePie";
+import Glossary from "./pages/Glossary/Glossary";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Card} />
           <Route path="/playerdetails/:id" exact component={PlayerDetails} />
+          <Route path="/glossary" exact component={Glossary} />
         </Switch>
         <Footer />
       </BrowserRouter>

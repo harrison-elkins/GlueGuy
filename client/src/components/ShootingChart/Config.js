@@ -40,6 +40,14 @@ export default {
       id: "lines",
     },
   ],
+  axisTop: {
+    tickSize: 5,
+    tickPadding: 5,
+    tickRotation: 90,
+    legend: "Points Per Shot & 3 Point%",
+    legendPosition: "middle",
+    legendOffset: 16,
+  },
   axisBottom: {
     tickSize: 5,
     tickPadding: 5,

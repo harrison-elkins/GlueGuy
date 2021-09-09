@@ -44,6 +44,7 @@ const dbReset = async () => {
         desc: obj.desc,
         image: obj.image,
         status: obj.status,
+        attributes: obj.attributes,
         ROYodds: obj.ROYodds,
         position: obj.position,
         height: obj.height,

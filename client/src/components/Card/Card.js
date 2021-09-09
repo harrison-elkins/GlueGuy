@@ -19,7 +19,6 @@ import SearchBar from "../SearchBar/SearchBar";
 import TransitionsModal from "../Modal/Modal";
 import Tooltip from "@material-ui/core/Tooltip";
 import Typography from "@material-ui/core/Typography";
-import PieChart from "../PieChart/PieChart";
 const emoji = require("node-emoji");
 
 export default class Card extends Component {
@@ -35,10 +34,13 @@ export default class Card extends Component {
       backgroundColor: "#242423",
       arrow: "#242423",
       color: "#fff",
+      padding: 10,
       width: 200,
-      height: 200,
+      height: 160,
       fontSize: theme.typography.pxToRem(16),
       border: "1px solid #dadde9",
+      justifyContent: "center",
+      alignItems: "center",
     },
   }))(Tooltip);
 
@@ -66,8 +68,6 @@ export default class Card extends Component {
     return (
       <>
         <Hero />
-
-        {/* <ShootingChart /> */}
         <main className="container">
           {this.state.allPlayers.map((player) => {
             let playerData = { id: player.name };
@@ -130,17 +130,9 @@ export default class Card extends Component {
                           },
                         },
                       }}
-                      title={
-                        <>
-                          {`The # ${player.rank} overall pick. Second-Team
-                              All-Summer-League selction.`}
-                        </>
-                      }
+                      title={player.attributes}
                     >
-                      <div
-                        className="pcard__left-block"
-                        whileHover={{ scale: 1.1 }}
-                      >
+                      <div className="pcard__left-block">
                         <img className="pcard__image" src={player.image} />
                         <div className="pcard__bio">
                           <div className="pcard__measurables">

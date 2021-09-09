@@ -25,6 +25,16 @@ export default function Header() {
       >
         Players
       </motion.a>
+      <Link to="/glossary">
+        <motion.p
+          className="glossary"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2, duration: 1 }}
+        >
+          Glossary
+        </motion.p>
+      </Link>
     </header>
   );
 }

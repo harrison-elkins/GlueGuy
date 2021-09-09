@@ -1,0 +1,45 @@
+.ref-container {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #242423;
+}
+
+.ref-head {
+  padding-left: 100px;
+  padding-top: 150px;
+}
+
+.ref {
+  height: 100%;
+  width: 100%;
+  background-color: #242423;
+  padding-left: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url("../../assets/basketball.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  &__formulas {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+  }
+  &__formula {
+    padding-top: 100px;
+  }
+  &__formula-head {
+    font-size: 18px;
+  }
+  &__desc {
+    padding-top: 24px;
+  }
+  &__formula-body {
+    font-family: "Andale Mono";
+    padding-top: 36px;
+    // border: 1px solid white;
+  }
+  &__formula-credits {
+    padding-top: 16px;
+  }
+}

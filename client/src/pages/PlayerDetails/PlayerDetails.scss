@@ -29,11 +29,39 @@ section {
     font-size: 36px;
     font-weight: 500;
   }
+  &__image {
+    background-color: white;
+    display: flex;
+    align-items: baseline;
+    width: 350px;
+    border-radius: 20px;
+    border-radius: 15px;
+    background-size: 10px 10px;
+    opacity: 1;
+    background-image: repeating-linear-gradient(
+      45deg,
+      #f9844a 0,
+      #f9844a 1px,
+      #f5f3f4 0,
+      #f5f3f4 50%
+    );
+  }
+  &__rank-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 48px;
+  }
   &__rank {
     font-size: 24px;
+    padding-right: 10px;
+  }
+  &__team {
+    font-size: 22px;
   }
   &__desc {
     font-weight: 400;
+    padding-bottom: 8px;
   }
   &__desc-container {
     width: 75%;
@@ -42,6 +70,9 @@ section {
   }
   &__odds {
     padding-top: 200px;
+  }
+  &__odds-head {
+    padding-bottom: 8px;
   }
   &__odds-current {
     padding-top: 40px;
@@ -63,7 +94,7 @@ section {
   &__box-item {
     padding-top: 16px;
     &:hover {
-      color: #f9c74f;
+      color: #fcf6bd;
     }
   }
   &__box-head {
@@ -74,7 +105,22 @@ section {
   &__adv-item {
     padding-top: 16px;
     &:hover {
-      color: #f9c74f;
+      color: #fcf6bd;
+    }
+  }
+  &__link-container {
+    padding-top: 36px;
+
+    transition: 0.3;
+  }
+  &__link {
+    text-decoration: none;
+    color: #fcf6bd;
+    font-weight: 500;
+    border-bottom: 0.75px solid #fcf6bd;
+    &:hover {
+      color: #52b788;
+      border-bottom: 0.75px solid #52b788;
     }
   }
   &__stats {

@@ -6,16 +6,16 @@ export default [
     color: "hsl(295, 70%, 50%)",
   },
   {
-    id: "Jalen Green",
-    label: "Jalen Green",
-    value: 16.3,
-    color: "hsl(260, 70%, 50%)",
-  },
-  {
     id: "Evan Mobley",
     label: "Evan Mobley",
     value: 17.6,
     color: "hsl(223, 70%, 50%)",
+  },
+  {
+    id: "Jalen Green",
+    label: "Jalen Green",
+    value: 16.3,
+    color: "hsl(260, 70%, 50%)",
   },
   {
     id: "Scottie Barnes",

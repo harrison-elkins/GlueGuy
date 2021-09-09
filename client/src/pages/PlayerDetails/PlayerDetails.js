@@ -4,7 +4,7 @@ import React from "react";
 import Radar from "../../components/radar/Radar";
 import PERChart from "../../components/PERCharts/PERCharts";
 import Chart from "../../components/chart/Chart";
-import ShootingChart from "../../components/ShootingChart/ShootingChart";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ScatterPlot from "../../components/ScatterPlot/ScatterPlot";
 import ResponsivePieChart from "../../components/ResponisivePie/ResponsivePie";
@@ -34,7 +34,7 @@ export default class PlayerDetails extends React.Component {
   };
 
   render() {
-    console.log(this.state.singlePlayer);
+    window.scrollTo(0, 0);
     return (
       <section>
         {this.state.singlePlayer && (
@@ -42,17 +42,26 @@ export default class PlayerDetails extends React.Component {
             <section className="dets">
               <article className="dets__basic">
                 <h1 className="dets__head">{this.state.singlePlayer?.name}</h1>
-                <p className="dets__rank">#{this.state.singlePlayer?.rank}</p>
-                <p className="dets__team">{this.state.singlePlayer?.team}</p>
-                <div className="dets__image">
-                  <img src={this.state.singlePlayer?.image} />
+                <div className="dets__rank-container">
+                  <p className="dets__rank">#{this.state.singlePlayer?.rank}</p>
+                  <p className="dets__team">{this.state.singlePlayer?.team}</p>
                 </div>
+                <motion.div
+                  className="dets__image"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  tranistion={{ duration: 2 }}
+                >
+                  <img src={this.state.singlePlayer?.image} />
+                </motion.div>
 
                 <div className="dets__desc-container">
                   <h3 className="dets__desc">
-                    "{this.state.singlePlayer?.desc}" -Kevin O' Connor, The
-                    Ringer
+                    "{this.state.singlePlayer?.desc}"{" "}
                   </h3>
+                  <p>
+                    <em>-Kevin O' Connor, The Ringer</em>
+                  </p>
                   <div className="dets__odds">
                     <motion.h4
                       className="dets__odds-current"
@@ -215,6 +224,11 @@ export default class PlayerDetails extends React.Component {
                   <strong>{this.state.singlePlayer?.PER}</strong> Player
                   Effeciency Rating
                 </motion.div>
+                <div className="dets__link-container">
+                  <Link className="dets__link" to="/glossary">
+                    See a complete breakdown of the metrics
+                  </Link>
+                </div>
               </div>
               {/* <Chart /> */}
             </article>
