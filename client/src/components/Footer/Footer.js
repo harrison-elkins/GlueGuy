@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <Link to="/">
-        <h2 className="logo">GlueGuy</h2>
+        <h2 className="footer__logo">GlueGuy</h2>
       </Link>
     </footer>
   );

@@ -1,0 +1,12 @@
+.pieChart {
+  height: 60vh;
+  width: 50%;
+  // box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: flex;
+  align-self: flex-end;
+
+  .pieChart:hover {
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+}

@@ -1,5 +1,5 @@
 export default {
-  keys: ["PPG"],
+  keys: ["PPG", "FG%"],
   margin: {
     top: 100,
     right: 120,
@@ -64,7 +64,7 @@ export default {
       justify: false,
       translateX: 100,
       translateY: 0,
-      itemsSpacing: 2,
+      itemsSpacing: 5,
       itemWidth: 100,
       itemHeight: 20,
       itemDirection: "left-to-right",

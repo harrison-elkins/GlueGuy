@@ -23,6 +23,9 @@ const playerSchema = new mongoose.Schema(
     status: {
       type: String,
     },
+    attributes: {
+      type: String,
+    },
     ROYodds: {
       type: String,
     },

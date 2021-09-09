@@ -15,7 +15,7 @@ class Chart extends React.Component {
           indexBy="id"
           margin={config.margin}
           padding={0.3}
-          colors={{ scheme: "nivo" }}
+          colors={{ scheme: "set3" }}
           colorBy="id"
           defs={config.defs}
           fill={config.fill}
@@ -31,6 +31,32 @@ class Chart extends React.Component {
           motionStiffness={90}
           motionDamping={15}
           legends={config.legends}
+          legendLabel={(datum) => `${datum.id}`}
+          legends={[
+            {
+              anchor: "bottom-right",
+              dataFrom: "keys",
+              direction: "column",
+              itemHeight: 20,
+              itemWidth: 110,
+              toggleSerie: true,
+              translateX: 120,
+            },
+          ]}
+          tooltip={({ id, value, color }) => (
+            <div
+              style={{
+                padding: 12,
+                color,
+                background: "#222222",
+              }}
+            >
+              <p>{data.player}</p>
+              <strong>
+                {id}: {value}
+              </strong>
+            </div>
+          )}
           theme={{
             background: "#242423",
             textColor: "#fff",

@@ -14,7 +14,7 @@ const HtmlTooltip = withStyles((theme) => ({
   },
 }))(Tooltip);
 
-export default function CustomizedTooltips() {
+export default function CustomizedTooltip() {
   return (
     <div>
       <HtmlTooltip
@@ -25,9 +25,7 @@ export default function CustomizedTooltips() {
             {"It's very engaging. Right?"}
           </React.Fragment>
         }
-      >
-        <Button>HTML</Button>
-      </HtmlTooltip>
+      ></HtmlTooltip>
     </div>
   );
 }

@@ -16,6 +16,25 @@ export default function Header() {
           GlueGuy
         </motion.h2>
       </Link>
+      <motion.a
+        className="players"
+        href="#players"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+      >
+        Players
+      </motion.a>
+      <Link to="/glossary">
+        <motion.p
+          className="glossary"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2, duration: 1 }}
+        >
+          Glossary
+        </motion.p>
+      </Link>
     </header>
   );
 }

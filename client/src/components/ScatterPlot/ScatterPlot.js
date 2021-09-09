@@ -10,11 +10,28 @@ class ScatterPlot extends Component {
         <ResponsiveScatterPlot
           data={data}
           colors={{ scheme: "set3" }}
-          nodeSize={25}
+          nodeSize={{
+            key: "x",
+            values: [10, 40],
+            sizes: [15, 30],
+          }}
           animate={true}
           motionConfig="wobbly"
           isInteractive={true}
           itemOpactity={1}
+          annotations={[
+            {
+              type: "circle",
+              match: { key: { x: [35], y: [50] } },
+              noteX: 25,
+              noteY: 25,
+              offset: 3,
+              noteTextOffset: -3,
+              noteWidth: 5,
+              note: "an annotation",
+              size: 40,
+            },
+          ]}
           tooltip={({ node }) => (
             <div
               style={{
@@ -82,6 +99,7 @@ class ScatterPlot extends Component {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
+            fontSize: 15,
             legend: "eFG%",
             legendPosition: "middle",
             legendOffset: -60,

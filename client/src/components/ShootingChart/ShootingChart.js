@@ -1,6 +1,5 @@
 import { ResponsiveBar } from "@nivo/bar";
 import React from "react";
-
 import "./ShootingChart.scss";
 import data from "./ShootingChartData.js";
 import config from "./Config.js";
@@ -8,7 +7,7 @@ import config from "./Config.js";
 class ShootingChart extends React.Component {
   render() {
     return (
-      <div class="chart">
+      <div class="shooting-chart">
         <ResponsiveBar
           data={data}
           keys={config.keys}
@@ -31,6 +30,18 @@ class ShootingChart extends React.Component {
           motionStiffness={90}
           motionDamping={15}
           legends={config.legends}
+          legendLabel={(datum) => `${datum.id}`}
+          legends={[
+            {
+              anchor: "bottom-right",
+              dataFrom: "keys",
+              direction: "column",
+              itemHeight: 20,
+              itemWidth: 110,
+              toggleSerie: true,
+              translateX: 120,
+            },
+          ]}
           tooltip={({ id, value, color }) => (
             <div
               style={{
@@ -39,6 +50,7 @@ class ShootingChart extends React.Component {
                 background: "#222222",
               }}
             >
+              <p>{data.player}</p>
               <strong>
                 {id}: {value}
               </strong>
